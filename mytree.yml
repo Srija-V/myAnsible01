@@ -5,4 +5,9 @@
   - name: Install tree on nodes
     apt:
       name: tree
-      state: absent
+      state: present
+
+  - name: install git
+    apt:
+      name: git
+      state: present
