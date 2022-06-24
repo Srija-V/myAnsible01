@@ -1,0 +1,11 @@
+---
+- hosts: mywebservers
+  become: true
+  gather_facts: yes
+  tasks:
+  - name: install jave on ubuntu node
+    apt:
+      name: "{{myjavapackonubuntu}}"
+      state: present
+    when: ansible_os_family == "Debian"
+  
