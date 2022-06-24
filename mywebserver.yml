@@ -2,8 +2,11 @@
 - hosts: all
   become: true
   tasks:
-  - name: i want to uninstall webserver
+  - name: i want to install webserver
     apt:
       name: apache2
-      state: absent
-  
+      state: present
+  - name: i want to start webserver
+    service:
+      name: apache2
+      state: started
