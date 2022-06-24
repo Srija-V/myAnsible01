@@ -3,9 +3,14 @@
   become: true
   gather_facts: yes
   tasks:
-  - name: i want to uninstall webserver
+  - name: i want to install webserver
     apt:
       name: apache2
-      state: absent
+      state: present
+    when: ansible_os_family == "Debian"
+  - name: i want to start webserver
+    service:
+      name: apache2
+      state: started
     when: ansible_os_family == "Debian"
  
