@@ -3,7 +3,7 @@
   become: true
   gather_facts: yes
   tasks:
-  - name: i want to uninstall webserver
+  - name: i want to install webserver
     apt:
       name: apache2
       state: present
