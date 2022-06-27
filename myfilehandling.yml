@@ -24,5 +24,5 @@
   - name: Download file and force basic auth
     get_url:
         url: http://example.com/path/file.conf
-        dest: /etc/foo.conf
+        dest: /home/ubuntu/testfile
         force_basic_auth: yes
