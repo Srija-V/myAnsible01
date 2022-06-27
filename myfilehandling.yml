@@ -4,3 +4,8 @@
   gather_facts: yes
   tasks:
   - include_tasks: myfile.yml
+  
+  - name: i want to copy file from ansible master to node
+    copy:
+        src: mystatic
+        dest: /home/ubuntu/mystaticfile
