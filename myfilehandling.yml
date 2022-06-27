@@ -14,3 +14,8 @@
     apt:
         name: apache2
         state: present
+
+  - name: i want to copy dynamic file from ansible master to node
+    template:
+        src: myindexfile.j2
+        dest: /var/www/html/p2.html
