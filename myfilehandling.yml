@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.29.142
+  become: true
+  gather_facts: yes
+  tasks:
+  - name: Touch the file
+    file:
+      path: /home/ubuntu/testfile
+      state: touch
