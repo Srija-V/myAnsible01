@@ -23,6 +23,6 @@
   
   handlers:
      - name: restart webserver
-       service:
+       systemd:
           name: apache2
           start: restarted
