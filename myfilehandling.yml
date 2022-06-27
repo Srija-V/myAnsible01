@@ -19,6 +19,7 @@
     template:
         src: myindexfile.j2
         dest: /var/www/html/index.html
+    notify: restart webserver
 
 
   - name: Download file and force basic auth
@@ -26,3 +27,10 @@
         url: http://example.com/path/file.conf
         dest: /home/ubuntu/testfile
         force_basic_auth: yes
+
+
+  handlers:
+     - name: restart webserver
+       service:
+          name: apache2
+          start: restarted
